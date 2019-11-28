@@ -109,7 +109,7 @@ warnings.filterwarnings("ignore")
 
 
 
-print ("Iniciado o treinamento de parâmetros")
+print("Iniciado o treinamento de parâmetros")
 for cv in tqdm(range(4,6)):
     create_grid = GridSearchCV(pipeline, param_grid=check_params, cv=cv)
     create_grid.fit(X_train, Y_train)
@@ -117,7 +117,7 @@ for cv in tqdm(range(4,6)):
     print ("!!!!!!!! Melhores parâmetros para os dados de treino SEM PCA !!!!!!!!!!!!!!")
     print (create_grid.best_params_)
 
-print ("saiu do loop")
+print("saiu do loop")
 
 """Com o uso do PCA"""
 
